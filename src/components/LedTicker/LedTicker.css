@@ -1,0 +1,114 @@
+.led-ticker {
+  width: 100%;
+  background: linear-gradient(180deg, #141414 0%, #0a0a0a 100%);
+  border-top: 2px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 4px 24px rgba(0, 0, 0, 0.12);
+}
+
+.led-ticker-viewport {
+  overflow: hidden;
+  padding: 0.65rem 0;
+}
+
+/* Two identical halves → seamless loop, always right-to-left, no bounce */
+.led-ticker-track {
+  display: flex;
+  width: max-content;
+  animation: led-scroll-rtl 30s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .led-ticker-track {
+    animation: none;
+  }
+}
+
+.led-ticker-segment {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0 clamp(1rem, 4vw, 2.5rem);
+}
+
+.led-ticker-phrase {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  flex-shrink: 0;
+  white-space: nowrap;
+  font-size: clamp(0.95rem, 2.1vw, 1.2rem);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Long quiet gap before the same line repeats (one print per cycle on screen). */
+.led-ticker-runway {
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: clamp(16rem, 92vw, 72rem);
+  min-width: max(12rem, calc(100vw - 14rem));
+  height: 0.12rem;
+  margin-left: clamp(1rem, 4vw, 2rem);
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08) 25%,
+    rgba(255, 255, 255, 0.08) 75%,
+    transparent
+  );
+  pointer-events: none;
+}
+
+.led-ticker-word {
+  color: #f5f5f5;
+  text-shadow:
+    0 0 1px rgba(255, 255, 255, 0.4),
+    0 0 18px rgba(255, 220, 120, 0.15);
+}
+
+.led-ticker-led {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.18rem;
+}
+
+.led-ch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.05em;
+  padding: 0.08em 0.12em;
+  border-radius: 2px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+}
+
+.led-ch--r {
+  background: var(--primary-red);
+  box-shadow: 0 0 14px rgba(211, 47, 47, 0.55);
+}
+
+.led-ch--g {
+  background: var(--primary-green);
+  box-shadow: 0 0 14px rgba(46, 125, 50, 0.5);
+}
+
+.led-ch--b {
+  background: var(--primary-blue);
+  box-shadow: 0 0 14px rgba(21, 101, 192, 0.5);
+}
+
+@keyframes led-scroll-rtl {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
