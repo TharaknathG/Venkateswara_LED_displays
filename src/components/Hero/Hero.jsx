@@ -9,21 +9,22 @@ const Hero = () => {
       <div className="hero-stack">
         <div className="container hero-container">
         <div className="hero-content fade-in">
-          <p className="hero-subtitle">CHENNAI&apos;S LED DISPLAY EXPERTS</p>
+          <p className="hero-subtitle">CHENNAI&apos;S TRUSTED LED DISPLAY EXPERTS</p>
           <h1 className="hero-title">
             <span className="hero-title-line">
-              <span className="text-red">Bright</span> ideas
+              <span className="text-red">Bright</span> Displays
             </span>
             <span className="hero-title-line">
-              <span className="text-green">Bold</span> displays
+              <span className="text-green">Powerful</span> Visuals
             </span>
             <span className="hero-title-line">
-              <span className="text-blue">Built</span> for you.
+              <span className="text-blue">Built</span> for Business.
             </span>
           </h1>
           <p className="hero-description">
-            New LED scrolling boards & video walls installed from scratch. 
-            Expert repair service for existing displays. Indoor & outdoor.
+            Professional LED scrolling boards, video walls, indoor &amp; outdoor display solutions,
+            installation, repair, and maintenance services backed by 15+ years of experience and
+            500+ successful projects.
           </p>
           <div className="hero-btns">
             <button
@@ -31,7 +32,7 @@ const Hero = () => {
               className="btn btn-primary"
               onClick={() => scrollToSection('products-services')}
             >
-              Products &amp; Services
+              Explore Services
             </button>
           </div>
         </div>
@@ -40,7 +41,7 @@ const Hero = () => {
           <div className="stat-card stat-red">
             <div className="stat-info">
               <p className="stat-label">INSTALLATIONS COMPLETED</p>
-              <h2 className="stat-value">250+</h2>
+              <h2 className="stat-value">500+</h2>
             </div>
           </div>
           
@@ -48,15 +49,13 @@ const Hero = () => {
             <div className="stat-card stat-green">
               <div className="stat-info">
                 <p className="stat-label">EXPERIENCE</p>
-                <h2 className="stat-value">5+ yrs</h2>
-                <p className="stat-note">In Chennai</p>
+                <h2 className="stat-value">15+ yrs</h2>
               </div>
             </div>
             <div className="stat-card stat-blue">
               <div className="stat-info">
-                <p className="stat-label">CLIENTS SERVED</p>
-                <h2 className="stat-value">100+</h2>
-                <p className="stat-note">Happy customers</p>
+                <p className="stat-label">HAPPY CLIENTS</p>
+                <h2 className="stat-value">500+</h2>
               </div>
             </div>
           </div>

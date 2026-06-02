@@ -38,6 +38,11 @@ const Navbar = ({ onRequestQuote = () => {} }) => {
             </button>
           </li>
           <li>
+            <button type="button" className="nav-link" onClick={() => scrollToSection('reviews')}>
+              Reviews
+            </button>
+          </li>
+          <li>
             <button type="button" className="nav-link" onClick={() => scrollToSection('contact')}>
               Contact
             </button>

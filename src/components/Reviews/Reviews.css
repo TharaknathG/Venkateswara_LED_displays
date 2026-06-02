@@ -1,0 +1,119 @@
+.reviews {
+  padding: clamp(3rem, 7vw, 4.5rem) 0 80px;
+  scroll-margin-top: 88px;
+  border-top: 1px solid var(--border-color);
+}
+
+.reviews .section-title {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.reviews-intro {
+  text-align: center;
+  color: var(--text-muted);
+  max-width: 36rem;
+  margin: 0 auto 2rem;
+}
+
+.reviews-message {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.reviews-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.reviews-setup {
+  max-width: 40rem;
+  margin: 0 auto 2rem;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--card-bg);
+}
+
+.reviews-setup-lead {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  line-height: 1.55;
+}
+
+.reviews-setup-steps {
+  margin: 0 0 1rem 1.25rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.reviews-setup-steps li + li {
+  margin-top: 0.5rem;
+}
+
+.reviews-setup-steps a {
+  color: var(--primary-blue);
+  text-decoration: underline;
+}
+
+.reviews-setup-code {
+  margin-top: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 0.82rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.reviews-setup-note {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.reviews-setup code,
+.reviews-message code {
+  font-size: 0.88em;
+  background: var(--bg-color);
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+}
+
+.reviews-widget-wrap {
+  min-height: 120px;
+  margin-bottom: 1.5rem;
+}
+
+.reviews-widget-host {
+  width: 100%;
+}
+
+/* Hide Trustindex “Verified by Trustindex” badge injected by their widget */
+.reviews-widget-wrap :is(
+  a[href*='trustindex.io'],
+  [class*='ti-verified'],
+  [class*='trustindex-verified'],
+  .ti-verified-by-trustindex
+) {
+  display: none !important;
+}
+
+.reviews-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.reviews-maps-btn {
+  white-space: nowrap;
+}

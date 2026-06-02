@@ -5,22 +5,34 @@ const Services = () => {
   const items = [
     {
       title: 'Scrolling Boards',
-      description: 'Custom LED text tickers for all businesses.',
+      paragraphs: [
+        'Custom LED scrolling display boards for shops, showrooms, offices, restaurants, hospitals, schools, and businesses.',
+        'Bright, energy-efficient, and fully customizable text displays designed for clear visibility day and night.',
+      ],
       dotColor: 'red',
     },
     {
       title: 'Video Walls',
-      description: 'Modular HD display walls, indoor & outdoor.',
+      paragraphs: [
+        'High-quality LED video walls for live video, advertisements, 2D/3D visuals, animations, events, and commercial displays.',
+        'Seamless indoor and outdoor installations with stunning clarity for businesses, events, stages, malls, and public spaces.',
+      ],
       dotColor: 'green',
     },
     {
-      title: 'Outdoor Boards',
-      description: 'Weatherproof high-brightness displays.',
+      title: 'Indoor & Outdoor LED Boards',
+      paragraphs: [
+        'Durable indoor and outdoor LED display solutions built for maximum brightness, performance, and long-lasting reliability.',
+        'Perfect for branding, advertising, announcements, digital signage, and business promotions in any environment.',
+      ],
       dotColor: 'blue',
     },
     {
       title: 'Repair & Service',
-      description: 'All-brand repairs, AMC & spare parts.',
+      paragraphs: [
+        'Complete LED display board repair, maintenance, AMC support, and servicing for all brands and models.',
+        'Fast troubleshooting, panel replacement, wiring fixes, software updates, and technical support backed by 15+ years of industry experience.',
+      ],
       dotColor: 'black',
     },
   ];
@@ -42,7 +54,11 @@ const Services = () => {
                 <span className={`dot ${item.dotColor}`} aria-hidden />
                 <div className="service-copy">
                   <h3 className="service-title">{item.title}</h3>
-                  <p className="service-desc">{item.description}</p>
+                  {item.paragraphs.map((text) => (
+                    <p key={text} className="service-desc">
+                      {text}
+                    </p>
+                  ))}
                 </div>
               </div>
             </div>

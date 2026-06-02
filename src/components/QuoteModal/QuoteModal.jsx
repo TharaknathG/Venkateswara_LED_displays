@@ -2,7 +2,7 @@ import React, { useEffect, useId, useRef, useState } from 'react';
 import './QuoteModal.css';
 
 const QUOTE_EMAIL =
-  import.meta.env.VITE_QUOTE_FORM_EMAIL || 'jbnarayanan@gmail.com';
+  import.meta.env.VITE_QUOTE_FORM_EMAIL || 'jbnarayanan79@gmail.com';
 
 const FormSubmitEndpoint = `https://formsubmit.co/ajax/${encodeURIComponent(QUOTE_EMAIL)}`;
 

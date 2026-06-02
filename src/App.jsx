@@ -3,6 +3,7 @@ import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import Services from './components/Services/Services';
 import Gallery from './components/Gallery/Gallery';
+import Reviews from './components/Reviews/Reviews';
 import Footer from './components/Footer/Footer';
 import QuoteModal from './components/QuoteModal/QuoteModal';
 import './App.css';
@@ -25,6 +26,7 @@ function App() {
         <Hero />
         <Services />
         <Gallery />
+        <Reviews />
       </main>
       <Footer />
       <QuoteModal isOpen={quoteOpen} onClose={() => setQuoteOpen(false)} />

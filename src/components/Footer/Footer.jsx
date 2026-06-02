@@ -1,12 +1,9 @@
 import React from 'react';
+import { MAPS_URL } from '../../config/maps';
 import './Footer.css';
 
-/** Google Maps — Venkateswara LED Display, Medavakkam */
-const MAPS_URL =
-  'https://www.google.com/maps/place/Venkateswara+LED+Display/data=!4m2!3m1!1s0x0:0x468652e7ef449f8e';
-
 const PHONE_TEL = 'tel:+919840430656';
-const EMAIL_MAILTO = 'mailto:jbnarayanan@gmail.com';
+const EMAIL_MAILTO = 'mailto:jbnarayanan79@gmail.com';
 
 function IconPhone() {
   return (
@@ -63,14 +60,14 @@ const Footer = () => {
           <button
             type="button"
             className="footer-pill footer-pill--email"
-            aria-label="Email jbnarayanan@gmail.com"
-            title="jbnarayanan@gmail.com"
+            aria-label="Email jbnarayanan79@gmail.com"
+            title="jbnarayanan79@gmail.com"
             onClick={() => {
               window.location.href = EMAIL_MAILTO;
             }}
           >
             <IconMail />
-            <span className="footer-pill-email-text">jbnarayanan@gmail.com</span>
+            <span className="footer-pill-email-text">jbnarayanan79@gmail.com</span>
           </button>
           <button
             type="button"
